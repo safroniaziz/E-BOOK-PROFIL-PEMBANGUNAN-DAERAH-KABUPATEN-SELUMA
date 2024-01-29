@@ -44,8 +44,7 @@
                             <img src="{{ asset('assets/src/logo.png') }}" class="md:w-12 md:h-14 w-10 h-12" />
                             <div :class="[isOpen ? 'text-black lg:text-slate-100' : ' text-slate-100']"
                                 class="ml-3 menu-active ">
-                                <strong class="text-2xl   font-extrabold  text-sh uppercase">Satu
-                                    Data</strong>
+                                <strong class="text-2xl   font-extrabold  text-sh uppercase">E-PROFILE PEMBANGUNAN DAERAH</strong>
                                 <p class="text-[13px] md:text-[15px]   uppercase -mt-2 relative">
                                     KABUPATEN SELUMA
                                 </p>
@@ -203,8 +202,7 @@
                         <img src="{{ asset('assets/src/logo.png') }}" class="md:w-12 md:h-14 w-10 h-12" />
 
                         <div class="ml-3 text-slate-100 ">
-                            <strong class="text-2xl   font-extrabold  text-sh uppercase">Satu
-                                Data</strong>
+                            <strong class="text-2xl   font-extrabold  text-sh uppercase">E-PROFILE PEMBANGUNAN DAERAH</strong>
                             <p class="text-[13px] md:text-[15px]   uppercase -mt-2 relative">
                                 KABUPATEN SELUMA
                             </p>

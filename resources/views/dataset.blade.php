@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-book profil pembangunan daerah</title>
+    <title>E-PROFILE PEMBANGUNAN DAERAH</title>
     <link rel="shortcut icon" href="{{ asset('assets/src/logo.png') }}" />
 
     <!-- stylesheets tailwind -->
@@ -34,18 +34,25 @@
 <body id="home" class="overflow-x-hidden">
     <div class="font-[Poppins] 2xl:text-xl font-nunito text-slate-900 overflow-x-hidden w-full">
         <!-- navbar  -->
-        <nav id="shadow-nav" x-data="{isOpen: false }" class="fixed top-0 z-50 w-full font-[Poppins]">
-            <div id="navbar" :class="[isOpen ? 'translate-x-0 opacity-100  bg-white' : ' ']"
+        <nav id="shadow-nav" x-data="{isOpen: false }" class="fixed top-0 bg-[#DC2626] z-50 w-full font-[Poppins]">
+            <!-- Top Bar -->
+            <div id="top-bar" class="w-full     bg-gray-900 duration-500">
+                <div class="flex   w-full     text-gray-300 space-x-4 text-sm py-2">
+                    <marquee behavior="" direction="">
+                        <p>email@email.com</p>
+                    </marquee>
+
+                </div>
+            </div>
+            <div id="navbar" :class="[isOpen ? 'translate-x-0 opacity-100  bg-[#DC2626]' : '']"
                 class="py-6 mx-auto   lg:bg-transparent duration-300 transition-all ease-in-out">
-                <div class="lg:flex mx-auto container px-5 lg:items-center lg:justify-between">
+                <div class="lg:flex mx-auto container px-5 lg:items-center lg:justify-between   ">
                     <div class="flex items-center justify-between">
                         <!-- logo -->
                         <a href="/view/home.html" class="flex items-center text-black mx-4 md:ml-6">
                             <img src="{{ asset('assets/src/logo.png') }}" class="md:w-12 md:h-14 w-10 h-12" />
-                            <div :class="[isOpen ? 'text-black lg:text-slate-100' : ' text-slate-100']"
-                                class="ml-3 menu-active ">
-                                <strong class="text-2xl   font-extrabold  text-sh uppercase">Satu
-                                    Data</strong>
+                            <div class="ml-3 text-slate-100   ">
+                                <strong class="text-2xl   font-extrabold  text-sh uppercase font-[arial]">E-PROFILE PEMBANGUNAN DAERAH</strong>
                                 <p class="text-[13px] md:text-[15px]   uppercase -mt-2 relative">
                                     KABUPATEN SELUMA
                                 </p>
@@ -54,8 +61,7 @@
                         <!-- Mobile menu button -->
                         <div class="flex lg:hidden">
                             <button x-cloak @click="isOpen = !isOpen" type="button"
-                                class="text-green-900 hover:text-green-500 focus:outline-none focus:text-green-700"
-                                aria-label="toggle menu">
+                                class="text-white hover:text-red-500 focus:outline-none  " aria-label="toggle menu">
                                 <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
@@ -68,23 +74,58 @@
                         </div>
                     </div>
                     <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-                    <div x-cloak :class="[isOpen ? '  opacity-100 block' : 'opacity-0  hidden']"
-                        class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:bg-none menu-navbar text-green-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
+                    <div x-cloak :class="[isOpen ? '  opacity-100 block' : 'opacity-0  hidden']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out
+                        bg-[#DC2626] md:bg-none menu-navbar text-white lg:mt-0 lg:p-0 lg:top-0 lg:relative
+                        lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
                         id="list-menu">
                         <div class="flex flex-col -mx-6 lg:flex-row lg:items-center text-[16px]">
                             <!-- if menu active "active-menu" else "text-gray-600" -->
                             <a href="{{ route('home') }}"
-                                class="px-2 py-2 mx-2 mt-2 text-gray-600 lg:text-black font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Beranda</a>
+                                class="px-2 py-2 mx-2 mt-2   text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Home</a>
                             <a href="{{ route('dataset') }}"
-                                class="px-2 py-2 active-menu text-gray-600 lg:text-black font-bold text-[14px] text-sh mx-2 mt-2   duration-300 transform rounded-md lg:mt-0   ">Dataset</a>
-                            <a href="{{ route('organisation') }}"
-                                class="px-2 py-2 mx-2 mt-2 text-gray-600 lg:text-black font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Organizations</a>
-                            <a href="{{ route('group') }}"
-                                class="px-2 py-2 mx-2 mt-2  text-gray-600 lg:text-black font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Groups</a>
-                            <a href="{{ route('showcase') }}"
-                                class="px-2 py-2 mx-2 mt-2  text-gray-600 lg:text-black font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">showcase</a>
-                            <a href="{{ route('tentang') }}"
-                                class="px-2 py-2 mx-2 mt-2  text-gray-600 lg:text-black font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Tentang</a>
+                                class="px-2 py-2 text-white active-menu font-bold text-[14px] text-sh mx-2 mt-2   duration-300 transform rounded-md lg:mt-0   ">Data Statistik Sektoral</a>
+                            <a href="Organizations.html"
+                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Organizations</a>
+                            <a href="Groups.html"
+                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Groups</a>
+                            <a href="showcase.html"
+                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">showcase</a>
+                            <button x-data="{ isOpen: false }" class="relative inline-block text-white active:text-[#ffc568]
+                                    focus:text-[#ffc568]">
+                                <!-- Dropdown toggle button -->
+                                <div @click="isOpen = !isOpen" class="relative z-10 flex px-2 py-2 mx-2 mt-2   font-bold text-[14px]
+                                        text-sh duration-300 transform rounded-md lg:mt-0">
+                                    <span>Data</span>
+                                    <svg class="w-5 h-5 2xl:mt-1 ml-2  " xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+
+                                <!-- Dropdown menu -->
+                                <div x-show="isOpen" @click.away="isOpen = false"
+                                    x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="opacity-0 scale-90"
+                                    x-transition:enter-end="opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-100"
+                                    x-transition:leave-start="opacity-100 scale-100"
+                                    x-transition:leave-end="opacity-0 scale-90"
+                                    class="absolute right-0 z-20 w-full lg:w-48 py-2   origin-top-right bg-white rounded-md shadow-xl  ">
+                                    <a href="#"
+                                        class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 ">
+                                        Data Penduduk </a>
+                                    <a href="#"
+                                        class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 ">
+                                        Data Penduduk </a>
+
+                                </div>
+                            </button>
+                            <a href="tentang.html"
+                                class="px-2 py-2 mx-2 mt-2  text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Tentang</a>
+                            <a href="login.html"
+                                class="px-5 py-2 mx-2 mt-2  text-white font-bold text-[14px]     duration-300 transform rounded-md lg:mt-0   hover:bg-red-300 bg-red-400 hover:scale-[99%] active:scale-95">Login</a>
                         </div>
                     </div>
                 </div>
@@ -93,13 +134,16 @@
         <!-- end navbar -->
         <!-- slider -->
         <section id="home">
-            <div class="text-center overflow-hidden bg-gradient-to-br   from-[#096914] to-lime-200">
-                <div class="  z-10  mt-32 mb-20 lg:mt-40 overflow-hidden container mx-auto section-heading ">
+            <div class="text-center overflow-hidden bg-[#DC2626]">
+                <div class="z-10 mt-32 mb-20 lg:mt-40 overflow-hidden container mx-auto section-heading" style="width: 80%; color: white;">
 
-                    <h2 data-aos="fade-down"
-                        class="mb-6 text-center font-sans text-4xl lg:text-5xl 2xl:text-6xl font-extrabold text-green-900   "
-                        style="text-shadow:5px 5px 5px #38383863;">
-                        Datasets</h2>
+                    <h2 data-aos="fade-down" class="mb-8 text-center font-sans text-4xl lg:text-5xl 2xl:text-5xl font-extrabold text-white" style="text-shadow:5px 5px 5px #38383863;">
+                        DATA STATISTIK SEKTORAL
+                    </h2>
+
+                    <p>
+                        Kabupaten Seluma merupakan kabupaten dengan luas wilayah terbesar ketiga di Provinsi Bengkulu, yaitu 19.919,33 km<sup>2</sup>, dimana kabupaten terluas yaitu Kabupaten Bengkulu Utara dengan 4.324,60 km<sup>2</sup>, diikuti oleh Kabupaten Muko-muko diposisi kedua dengan luas 4.036,70 km<sup>2</sup>.
+                    </p>
 
                 </div>
 
@@ -126,44 +170,47 @@
         <!-- content  -->
         <section id="content" class="bg-gray-100 py-20">
             <div class="container mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-3">
                     <div class="col-span-1 " data-aos="fade-right">
+                        <img src="{{ asset('assets/src/dataset.svg') }}"
+                            style="filter: drop-shadow(3px -6px 5px #353535)" alt=".">
+
                         <div
                             class="bg-white shadow-gray-300 shadow-lg  rounded-lg     p-5   text-gray-800  text-sm leading-7">
                             <select
-                                class="w-full py-3 px-3 my-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 text-[14px]">
+                                class="w-full py-3 px-3 my-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 text-[14px]">
                                 <option>-- All Organizations --</option>
                             </select>
                             <select
-                                class="w-full py-3 px-3 my-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 text-[14px]">
+                                class="w-full py-3 px-3 my-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 text-[14px]">
                                 <option>-- All Groups --</option>
                             </select>
                             <select
-                                class="w-full py-3 px-3 my-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 text-[14px]">
+                                class="w-full py-3 px-3 my-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 text-[14px]">
                                 <option>-- All Tags --</option>
                             </select>
                             <select
-                                class="w-full py-3 px-3 my-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 text-[14px]">
+                                class="w-full py-3 px-3 my-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 text-[14px]">
                                 <option>-- All Formats --</option>
                             </select>
                             <select
-                                class="w-full py-3 px-3 my-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 text-[14px]">
+                                class="w-full py-3 px-3 my-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900  dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 text-[14px]">
                                 <option>-- All Licenses --</option>
                             </select>
                             <button href="login.html"
-                                class="  py-2   my-3 w-full text-white text-[14px] transition-colors duration-300 transform   lg:mt-0     bg-gradient-to-r  from-[#096914] to-lime-300 border border-white rounded-lg  hover:from-[#19321c] hover:to-lime-400  px-5  ">Cari</button>
+                                class="  py-2   my-3 w-full text-white text-[14px] transition-colors duration-300 transform   lg:mt-0     bg-gradient-to-r  from-red-800 to-red-500 border border-white rounded-lg  hover:from-red-900 hover:to-red-500  px-5  ">Cari</button>
                         </div>
 
 
                     </div>
-                    <div class="col-span-1 lg:col-span-2 " data-aos="fade-left">
+                    <div class="col-span-1 lg:col-span-2  " data-aos="fade-left">
                         <div class="bg-white shadow-gray-300 items-center text-sm justify-between w-full flex rounded-lg   shadow-lg p-2 mb-5 sticky"
                             style="top: 5px">
                             <input
-                                class="   rounded-lg w-full py-3 pl-4 text-sm text-gray-700   leading-tight   focus:ring-green-500 border-none duration-300 transform     outline-none   "
+                                class="   rounded-lg w-full py-3 pl-4 text-sm text-gray-700   leading-tight   focus:ring-red-500 border-none duration-300 transform     outline-none   "
                                 type="text" placeholder="Search Datasets...">
                             <div
-                                class="bg-green-600 py-2.5 px-5 flex hover:bg-green-400 cursor-pointer mx-2 duration-300 transform text-white rounded-lg ">
+                                class="bg-red-600 py-2.5 px-5 flex hover:bg-red-400 cursor-pointer mx-2 duration-300 transform text-white rounded-lg ">
                                 <svg class="w-6 h-6 text-white mr-2" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd"
@@ -182,7 +229,7 @@
                                 <div class="flex flex-row space-x-2 mt-2">
                                     <div class="  max-w-[110px] w-full">Organizations </div>
                                     <div class="w-full  space-x-2">
-                                        <button class="bg-green-900 flex rounded-xl shadow-md text-white pl-5 hover:bg-green-700 duration-300 transform ">Dinas Pekerjaan
+                                        <button class="bg-red-900 flex rounded-xl shadow-md text-white pl-5 hover:bg-red-700 duration-300 transform ">Dinas Pekerjaan
                                             Umum dan Penataan Ruang
                                         <svg class="w-5 h-5 mx-3 mt-1" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/> </svg>
                                         </button>
@@ -191,7 +238,7 @@
                                 <div class="flex flex-row space-x-2 mt-2">
                                     <div class="  max-w-[110px] w-full">Groups </div>
                                     <div class="w-full  space-x-2">
-                                        <button class="bg-green-900 flex rounded-xl shadow-md text-white pl-5 hover:bg-green-700 duration-300 transform ">Dinas Pekerjaan
+                                        <button class="bg-red-900 flex rounded-xl shadow-md text-white pl-5 hover:bg-red-700 duration-300 transform ">Dinas Pekerjaan
                                             Umum dan Penataan Ruang
                                         <svg class="w-5 h-5 mx-3 mt-1" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/> </svg>
                                         </button>
@@ -200,7 +247,7 @@
                                 <div class="flex flex-row space-x-2 mt-2">
                                     <div class="  max-w-[110px] w-full">Tags </div>
                                     <div class="w-full  space-x-2">
-                                        <button class="bg-green-900 flex rounded-xl shadow-md text-white pl-5 hover:bg-green-700 duration-300 transform ">Dinas Pekerjaan
+                                        <button class="bg-red-900 flex rounded-xl shadow-md text-white pl-5 hover:bg-red-700 duration-300 transform ">Dinas Pekerjaan
                                             Umum dan Penataan Ruang
                                         <svg class="w-5 h-5 mx-3 mt-1" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/> </svg>
                                         </button>
@@ -209,7 +256,7 @@
                                 <div class="flex flex-row space-x-2 mt-2">
                                     <div class="  max-w-[110px] w-full">Formats </div>
                                     <div class="w-full  space-x-2">
-                                        <button class="bg-green-900 flex rounded-xl shadow-md text-white pl-5 hover:bg-green-700 duration-300 transform ">Dinas Pekerjaan
+                                        <button class="bg-red-900 flex rounded-xl shadow-md text-white pl-5 hover:bg-red-700 duration-300 transform ">Dinas Pekerjaan
                                             Umum dan Penataan Ruang
                                         <svg class="w-5 h-5 mx-3 mt-1" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/> </svg>
                                         </button>
@@ -218,7 +265,7 @@
                                 <div class="flex flex-row space-x-2 mt-2">
                                     <div class="  max-w-[110px] w-full">Licenses </div>
                                     <div class="w-full  space-x-2">
-                                        <button class="bg-green-900 flex rounded-xl shadow-md text-white pl-5 hover:bg-green-700 duration-300 transform ">Dinas Pekerjaan
+                                        <button class="bg-red-900 flex rounded-xl shadow-md text-white pl-5 hover:bg-red-700 duration-300 transform ">Dinas Pekerjaan
                                             Umum dan Penataan Ruang
                                         <svg class="w-5 h-5 mx-3 mt-1" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/> </svg>
                                         </button>
@@ -230,7 +277,7 @@
 
                                 <div class="mt-2">
                                     <a class="text-[16px] text-gray-700 font-bold hover:text-blue-500 duration-300 transform line-clamp-2"
-                                        href="{{ route('dataset_detail') }}">Data Ketersediaan Pangan Utama</a>
+                                        href="dataset_detail.html">Data Ketersediaan Pangan Utama</a>
                                     <h1 class="    font-medium text-[14px] text-gray-900 mb-3 line-clamp-4">
                                         Jumlah ketersediaan (ton) komoditi, Beras, Jagung, Bawang merah, Bawang putih,
                                         Cabe besar, Cabe rawit, Daging sapi, Daging ayam, Telur, Gula pasir dan Minyak
@@ -427,7 +474,7 @@
 
         <!-- Footer  -->
 
-        <footer class="relative pt-32 bg-gradient-to-br from-[#096914] to-lime-200">
+        <footer class="relative pt-32 bg-[#DC2626]">
             <div
                 class="mx-auto container px-5 py-20 pt-36 pb-16 flex items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                 <div class="lg:w-2/4 md:w-1/2  w-full flex-shrink-0 md:mx-0 mx-auto text-left">
@@ -435,7 +482,7 @@
                         <img src="{{ asset('assets/src/logo.png') }}" class="md:w-12 md:h-14 w-10 h-12" />
 
                         <div class="ml-3 text-slate-100 ">
-                            <strong class="text-2xl   font-extrabold  text-sh uppercase">Satu
+                            <strong class="text-2xl   font-extrabold  text-sh uppercase font-[arial]">Satu
                                 Data</strong>
                             <p class="text-[13px] md:text-[15px]   uppercase -mt-2 relative">
                                 KABUPATEN SELUMA
@@ -443,61 +490,61 @@
                         </div>
                     </a>
                     <p class="mt-4 text-sm text-gray-200 leading-6 max-w-xl">
-                        Seluruh kumpulan data yang tersedia dalam E-book profil pembangunan daerah Kabupaten Seluma dapat diakses secara
+                        Seluruh kumpulan data yang tersedia dalam Portal E-PROFILE PEMBANGUNAN DAERAH Kabupaten Seluma dapat diakses secara
                         terbuka dan dikategorikan sebagai data publik.
                         Menggunakan data secara bersama-sama dengan visualisasi data yang menarik
                     </p>
                     <a class="flex my-3 group">
                         <svg xmlns="http://www.w3.org/2000/svg"
-                            class="fill-gray-300 group-hover:fill-yellow-200 w-5 h-5 mr-3" viewBox="0 0 16 16" id="map">
+                            class="fill-gray-300 group-hover:fill-orange-200 w-5 h-5 mr-3" viewBox="0 0 16 16" id="map">
                             <path
                                 d="M8 0C5.2 0 3 2.2 3 5s4 11 5 11 5-8.2 5-11-2.2-5-5-5zm0 8C6.3 8 5 6.7 5 5s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z">
                             </path>
                         </svg>
 
                         <span
-                            class="text-sm text-white group-hover:text-yellow-200 duration-300 transform break-normal max-w-xl">JL.
+                            class="text-sm text-white group-hover:text-orange-200 duration-300 transform break-normal max-w-xl">JL.
                             Basuki Rahmat Pematang Aur Tais, Kelurahan Talang Saling, Kec. Seluma, Kabupaten
                             Seluma</span>
                     </a>
 
                     <a class="flex my-3 group">
                         <svg xmlns="http://www.w3.org/2000/svg"
-                            class="fill-gray-300 group-hover:fill-yellow-200 w-5 h-5 mr-3" fill="currentColor"
+                            class="fill-gray-300 group-hover:fill-orange-200 w-5 h-5 mr-3" fill="currentColor"
                             class="bi bi-telephone-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                         </svg>
 
                         <span
-                            class="text-sm text-white group-hover:text-yellow-200 duration-300 transform break-normal">(0736)
+                            class="text-sm text-white group-hover:text-orange-200 duration-300 transform break-normal">(0736)
                             9150034</span>
                     </a>
 
                     <a class="flex my-3 group">
                         <svg xmlns="http://www.w3.org/2000/svg"
-                            class="fill-gray-300 group-hover:fill-yellow-200 w-5 h-5 mr-3" fill="currentColor"
+                            class="fill-gray-300 group-hover:fill-orange-200 w-5 h-5 mr-3" fill="currentColor"
                             class="bi bi-envelope" viewBox="0 0 16 16">
                             <path
                                 d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                         </svg>
                         <span
-                            class="text-sm text-white group-hover:text-yellow-200 duration-300 transform break-normal">diskominfo@selumakab.go.id</span>
+                            class="text-sm text-white group-hover:text-orange-200 duration-300 transform break-normal">diskominfo@selumakab.go.id</span>
                     </a>
                 </div>
 
                 <div class="lg:w-2/4 md:w-1/2 w-full px-4 md:ml-12 mt-10 md:mt-3">
 
-                    <iframe class="w-full rounded-lg h-72 brightness-90" style="box-shadow: 5px 5px 20px 5px #fef08a"
+                    <iframe class="w-full rounded-lg h-72 brightness-90" style="box-shadow: 5px 5px 20px 5px #4a0702"
                         frameborder="0"
                         src="https://www.google.com/maps/embed/v1/place?q=Kominfo+Kabupaten+Seluma,+Talang+Saling,+Seluma+Regency,+Bengkulu,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
                 </div>
             </div>
 
-            <div class="px-12 mx-auto py-4 flex flex-wrap flex-col sm:flex-row bg-[#408847]">
+            <div class="px-12 mx-auto py-4 flex flex-wrap flex-col sm:flex-row bg-red-800">
                 <p class="text-white mx-auto text-sm text-center sm:text-left">
                     Copyright&copy; 2023 |
-                    <a href="#" class="text-yellow-300 font-bold">Portal Data</a>. All
+                    <a href="#" class="text-orange-300 font-bold">Portal Data</a>. All
                     rights reserved.
                 </p>
             </div>
@@ -508,7 +555,7 @@
             <svg x-show="scrollBackTop" @click="window.scrollTo({top: 0, behavior: 'smooth'})"
                 x-on:scroll.window="scrollBackTop = (window.pageYOffset > window.outerHeight * 0.5) ? true : false"
                 aria-label="Back to top" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                class="bi bi-arrow-up-circle-fill fixed bottom-0 right-0 mx-3 my-10 w-8 fill-green-500 shadow-lg cursor-pointer hover:fill-green-400 bg-white rounded-full"
+                class="bi bi-arrow-up-circle-fill fixed bottom-0 right-0 mx-3 my-10 w-8 fill-red-500 shadow-lg cursor-pointer hover:fill-red-400 bg-white rounded-full"
                 viewBox="0 0 16 16">
                 <path
                     d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
