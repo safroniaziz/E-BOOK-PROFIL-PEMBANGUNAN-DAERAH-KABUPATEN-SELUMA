@@ -124,7 +124,7 @@
                             </button>
                             <a href="tentang.html"
                                 class="px-2 py-2 mx-2 mt-2  text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Tentang</a>
-                            <a href="login.html"
+                            <a href="{{ route('login') }}"
                                 class="px-5 py-2 mx-2 mt-2  text-white font-bold text-[14px]     duration-300 transform rounded-md lg:mt-0   hover:bg-red-300 bg-red-400 hover:scale-[99%] active:scale-95">Login</a>
                         </div>
                     </div>
