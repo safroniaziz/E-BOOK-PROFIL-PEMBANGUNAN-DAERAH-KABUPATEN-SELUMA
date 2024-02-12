@@ -82,40 +82,51 @@
                             <!-- if menu active "active-menu" else "text-gray-600" -->
                             <a href="{{ route('home') }}"
                                 class="px-2 py-2 mx-2 mt-2   text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Home</a>
-                            <button x-data="{ isOpen: false }" class="relative inline-block text-white active:text-[#ffc568]
+                            <a href="{{ route('dataStatistikSektoral') }}"
+                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Data Statistik Sektoral</a>
+                            {{-- <button x-data="{ isOpen: false }" class="relative inline-block text-white active:text-[#ffc568]
                                     focus:text-[#ffc568]">
                                 <!-- Dropdown toggle button -->
-                                <div @click="isOpen = !isOpen" class="relative z-10 px-2 py-2 mx-2 mt-2 font-bold text-[14px] text-sh duration-300 transform rounded-md lg:mt-0">
+                                <div @click="isOpen = !isOpen" class="relative z-10 flex px-2 py-2 mx-2 mt-2   font-bold text-[14px]
+                                        text-sh duration-300 transform rounded-md lg:mt-0">
                                     <span>Data Statistik Sektoral</span>
-                                    <svg class="w-5 h-5 2xl:mt-1 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    <svg class="w-5 h-5 2xl:mt-1 ml-2  " xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
                                     </svg>
-
-                                    <!-- Dropdown menu -->
-                                    <div x-show="isOpen" @click.away="isOpen = false"
-                                        x-transition:enter="transition ease-out duration-100"
-                                        x-transition:enter-start="opacity-0 scale-90"
-                                        x-transition:enter-end="opacity-100 scale-100"
-                                        x-transition:leave="transition ease-in duration-100"
-                                        x-transition:leave-start="opacity-100 scale-100"
-                                        x-transition:leave-end="opacity-0 scale-90"
-                                        class="absolute right-0 z-20 w-full lg:w-48 py-2 origin-top-right bg-white rounded-md shadow-xl">
-
-                                        <!-- Tambahkan styling khusus untuk memindahkan menu ke samping -->
-                                        <div class="flex flex-col">
-                                            <a href="{{ route('dataStatistikWilayah') }}"
-                                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 ">
-                                                Data Wilayah
-                                            </a>
-                                            <a href="#"
-                                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 ">
-                                                Data Kependudukan
-                                            </a>
-                                        </div>
-                                    </div>
                                 </div>
 
-                            </button>
+                                <!-- Dropdown menu -->
+                                <div x-show="isOpen" @click.away="isOpen = false"
+                                    x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="opacity-0 scale-90"
+                                    x-transition:enter-end="opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-100"
+                                    x-transition:leave-start="opacity-100 scale-100"
+                                    x-transition:leave-end="opacity-0 scale-90"
+                                    class="absolute right-0 z-20 w-full lg:w-48 py-2   origin-top-right bg-white rounded-md shadow-xl  ">
+                                    <a href="{{ route('dataStatistikWilayah') }}"
+                                        class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 ">
+                                        Data Wilayah </a>
+                                    <a href="#"
+                                        class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 ">
+                                        Data Kependudukan </a>
+
+                                </div>
+                            </button> --}}
+                            <a href="Organizations.html"
+                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Organizations</a>
+                            <a href="Groups.html"
+                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Groups</a>
+                            <a href="showcase.html"
+                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">showcase</a>
+
+                            <a href="tentang.html"
+                                class="px-2 py-2 mx-2 mt-2  text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Tentang</a>
+                            <a href="{{ route('login') }}"
+                                class="px-5 py-2 mx-2 mt-2  text-white font-bold text-[14px]     duration-300 transform rounded-md lg:mt-0   hover:bg-red-300 bg-red-400 hover:scale-[99%] active:scale-95">Login</a>
                         </div>
                     </div>
                 </div>
@@ -128,7 +139,7 @@
                 <div class="z-10 mt-32 mb-20 lg:mt-40 overflow-hidden container mx-auto section-heading" style="width: 80%; color: white;">
 
                     <h2 data-aos="fade-down" class="mb-8 text-center font-sans text-4xl lg:text-5xl 2xl:text-5xl font-extrabold text-white" style="text-shadow:5px 5px 5px #38383863;">
-                        DATA STATISTIK SEKTORAL
+                        DATA STATISTIK SEKTORAL (BERDASARKAN WILAYAH)
                     </h2>
 
                     <p>
@@ -198,7 +209,7 @@
                             style="top: 5px">
                             <input
                                 class="   rounded-lg w-full py-3 pl-4 text-sm text-gray-700   leading-tight   focus:ring-red-500 border-none duration-300 transform     outline-none   "
-                                type="text" placeholder="Search Datasets...">
+                                type="text" placeholder="Search dataStatistikWilayahs...">
                             <div
                                 class="bg-red-600 py-2.5 px-5 flex hover:bg-red-400 cursor-pointer mx-2 duration-300 transform text-white rounded-lg ">
                                 <svg class="w-6 h-6 text-white mr-2" xmlns="http://www.w3.org/2000/svg"
@@ -212,12 +223,12 @@
                         </div>
                         <div
                             class="bg-white shadow-gray-300 shadow-lg   rounded-lg     p-5   text-gray-800  text-sm leading-7 mb-5">
-                            <!-- dataset 1 -->
+                            <!-- dataStatistikWilayah 1 -->
                             <div class="  px-5    py-5 border-b border-gray-200">
 
                                 <div class="mt-2">
                                     <a class="text-[16px] text-gray-700 font-bold hover:text-blue-500 duration-300 transform line-clamp-2"
-                                        href="dataset_detail.html">Data Ketersediaan Pangan Utama</a>
+                                        href="dataStatistikWilayah_detail.html">Data Ketersediaan Pangan Utama</a>
                                     <h1 class="    font-medium text-[14px] text-gray-900 mb-3 line-clamp-4">
                                         Jumlah ketersediaan (ton) komoditi, Beras, Jagung, Bawang merah, Bawang putih,
                                         Cabe besar, Cabe rawit, Daging sapi, Daging ayam, Telur, Gula pasir dan Minyak
@@ -297,12 +308,12 @@
                                 </div>
 
                             </div>
-                            <!-- dataset 2 -->
+                            <!-- dataStatistikWilayah 2 -->
                             <div class="  px-5   py-5 first: border-b border-gray-200">
 
                                 <div class="mt-2">
                                     <a class="text-[16px] text-gray-700 font-bold hover:text-blue-500 duration-300 transform line-clamp-2"
-                                        href="dataset_detail.html">Data Ketersediaan Pangan Utama</a>
+                                        href="dataStatistikWilayah_detail.html">Data Ketersediaan Pangan Utama</a>
                                     <h1 class="    font-medium text-[14px] text-gray-900 mb-3 line-clamp-4">
                                         Jumlah ketersediaan (ton) komoditi, Beras, Jagung, Bawang merah, Bawang putih,
                                         Cabe besar, Cabe rawit, Daging sapi, Daging ayam, Telur, Gula pasir dan Minyak

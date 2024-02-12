@@ -35,7 +35,7 @@
 </head>
 
 <body id="home" class="overflow-x-hidden">
-    <div class="font-[Poppins] 2xl:text-xl font-nunito text-slate-900 overflow-x-hidden w-full pattern2">
+    <div class="font-[Poppins] 2xl:text-xl font-nunito text-slate-900 overflow-x-hidden w-full  ">
         <!-- navbar  -->
         <nav id="shadow-nav" x-data="{isOpen: false }" class="fixed top-0 bg-[#DC2626] z-50 w-full font-[Poppins]">
              <!-- Top Bar -->
@@ -88,48 +88,8 @@
                             <!-- if menu active "active-menu" else "text-gray-600" -->
                             <a href="{{ route('home') }}"
                                 class="px-2 py-2 mx-2 mt-2 active-menu  text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Home</a>
-                            <a href="{{ route('dataset') }}"
-                                class="px-2 py-2 text-white font-bold text-[14px] text-sh mx-2 mt-2   duration-300 transform rounded-md lg:mt-0   ">Data Statistik Sektoral</a>
-                            <a href="Organizations.html"
-                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Organizations</a>
-                            <a href="Groups.html"
-                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Groups</a>
-                            <a href="showcase.html"
-                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">showcase</a>
-                                <button x-data="{ isOpen: false }"
-                                    class="relative inline-block text-white active:text-[#ffc568]
-                                    focus:text-[#ffc568]">
-                                    <!-- Dropdown toggle button -->
-                                    <div @click="isOpen = !isOpen"
-                                        class="relative z-10 flex px-2 py-2 mx-2 mt-2   font-bold text-[14px]
-                                        text-sh duration-300 transform rounded-md lg:mt-0">
-                                        <span>Data</span>
-                                        <svg class="w-5 h-5 2xl:mt-1 ml-2  "
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-
-                                    <!-- Dropdown menu -->
-                                    <div x-show="isOpen" @click.away="isOpen = false"
-                                        x-transition:enter="transition ease-out duration-100"
-                                        x-transition:enter-start="opacity-0 scale-90"
-                                        x-transition:enter-end="opacity-100 scale-100"
-                                        x-transition:leave="transition ease-in duration-100"
-                                        x-transition:leave-start="opacity-100 scale-100"
-                                        x-transition:leave-end="opacity-0 scale-90"
-                                        class="absolute right-0 z-20 w-full lg:w-48 py-2   origin-top-right bg-white rounded-md shadow-xl  ">
-                                        <a href="#"
-                                            class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 ">
-                                            Data Penduduk </a>
-                                        <a href="#"
-                                            class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 ">
-                                            Data Penduduk </a>
-
-                                    </div>
-                                </button>
+                            <a href="{{ route('dataStatistikSektoral') }}"
+                                class="px-2 py-2 mx-2 mt-2 text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Data Statistik Sektoral</a>
                             <a href="tentang.html"
                                 class="px-2 py-2 mx-2 mt-2  text-white font-bold text-[14px] text-sh   duration-300 transform rounded-md lg:mt-0   ">Tentang</a>
                             <a href="{{ route('login') }}"
@@ -142,7 +102,7 @@
         <!-- end navbar -->
 
         <!-- slider -->
-<section id="home" class="bg-gradient-to-b from-[#E73530] from-60%">
+<section id="home" class="bg-gradient-to-b from-[#DC2626] from-30% mt-16">
 
     <div class="  text-center pt-32   ">
 
@@ -152,7 +112,7 @@
             <div data-aos="zoom-in-left" class="mt-16 w-full md:w-1/2 justify-center items-start md:px-5 text-center md:text-right order-last md:order-first
                       px-4   z-30">
                 <lottie-player data-aos="fade-right" src="{{ asset('assets/src/qksZkIwTuQ.json') }}"
-                      style="filter: drop-shadow(10px 10px 0px #fef08a)" background="transparent" speed="1"
+                      style="filter: drop-shadow(10px 10px 0px #4a0702)" background="transparent" speed="1"
                       class=" mx-auto" loop autoplay></lottie-player>
 
             </div>
@@ -167,7 +127,7 @@
                 <p class="my-2 leading-7 text-sm mb-8 text-white text-justify tracking-wide">
                     Kabupaten Seluma dengan luas 2.479,36 km2 didiami oleh penduduk sebanyak 214.245 jiwa, terdiri dari 103.938 jiwa atau 48,51% yaitu penduduk perempuan dan sebanyak 110.307 jiwa atau 51,49% yaitu penduduk laki-laki. Penduduk tersebut tersebar di 14 (empat belas) Kecamatan di Kabupaten Seluma. Penduduk yang paling banyak berada di Kecamatan Sukaraja yaitu sebanyak 34.388 jiwa atau sebesar 16,05%. Sedangkan penduduk yang paling sedikit berada di Kecamatan Ulu Talo yaitu 6.351 jiwa atau sebesar 2,96%.
                 </p>
-                <a href="{{ route('dataset') }}" class=" h-full inline-block text-center   mt-1 w-full md:max-w-[180px]
+                <a href="{{ route('dataStatistikSektoral') }}" class=" h-full inline-block text-center   mt-1 w-full md:max-w-[180px]
                                 hover:scale-[99%] focus:scale-95
                                 font-bold tracking-widest text-white bg-gradient-to-r from-orange-500 to-yellow-500
                                 border border-white rounded-lg
@@ -182,157 +142,189 @@
 
         <!-- slider -->
         <section id="home" class="">
-            <div
-                class="text-center mt-[100px]   bg-[#DC2626] pattern2">
-                <div id="default-carousel" class="relative  " data-carousel="slide">
-                    <!-- Carousel wrapper -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 my-32 container mx-auto">
+                <div class="col-span-1     ">
                     <div
-                        class="  relative lg:h-[90vh] md:h-96 h-72    shadow-md md:shadow-xl   shadow-[#444] md:shadow-[#444] ">
-                        <!-- Item 1 -->
-                        <div class="hidden duration-700 ease-in-out  " data-carousel-item>
-                            <div class="bg-black bg-opacity-10 w-full h-full absolute z-50">
-
-                            </div>
-                            <span
-                                class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">
-                                Slide 1</span>
-                            <img src="https://mc.selumakab.go.id/wp-content/uploads/2023/01/BANNER.png"
-                                class=" object-cover object-center      w-full h-full relative  "
-                                 >
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="hidden duration-700 ease-in-out  " data-carousel-item>
-                            <div class="bg-black bg-opacity-10 w-full h-full absolute z-50">
-
-                            </div>
-                            <span
-                                class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">
-                                Slide 1</span>
-                            <img src="https://mc.selumakab.go.id/wp-content/uploads/2023/01/DJI_0045-2048x1152.jpg"
-                                class=" object-cover object-center      w-full h-full relative  ">
-                        </div>
-                        <!-- Item 3 -->
-                        <div class="hidden duration-700 ease-in-out  " data-carousel-item>
-                            <div class="bg-black bg-opacity-10 w-full h-full absolute z-50">
-
-                            </div>
-                            <span
-                                class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">
-                                Slide 1</span>
-                            <img src="https://graphicsfamily.com/wp-content/uploads/edd/2022/01/Abstract-blue-with-golden-geometric-shapes-background-vector-illustration-scaled.jpg"
-                                class=" object-cover object-center      w-full h-full relative  ">
-                        </div>
-
-                    </div>
-                    <!-- Slider indicators -->
-                    <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1"
-                            data-carousel-slide-to="0"></button>
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
-                            data-carousel-slide-to="1"></button>
-                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-                                data-carousel-slide-to="2"></button>
-
-
-                    </div>
-                    <!-- Slider controls -->
-                    <button type="button"
-                        class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-                        data-carousel-prev>
-                        <span
-                            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 19l-7-7 7-7"></path>
-                            </svg>
-                            <span class="hidden">Previous</span>
-                        </span>
-                    </button>
-                    <button type="button"
-                        class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-                        data-carousel-next>
-                        <span
-                            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
-                            <span class="hidden">Next</span>
-                        </span>
-                    </button>
-                </div>
-                <!-- <div
-                    class="grid grid-cols-1 px-3 md:grid-cols-2 z-10  mt-32 mb-20 lg:mt-40 overflow-hidden container mx-auto ">
-                    <div class="col-span-1 px-8 lg:px-12 text-white   place-self-center text-left">
-                        <div data-aos="fade-left">
-                            <h2
-                                class="font-extrabold font-[arial] text-3xl lg:text-5xl inline-block text-transparent bg-clip-text bg-gradient-to-b from-white from-30% to-orange-200  ">
-                                Portal E-PROFILE PEMBANGUNAN DAERAH<br />Kabupaten Seluma
-                            </h2>
-                            <p class="text-gray-200 mt-4 text-sm leading-7 md:leading-7  ">
-                                Seluruh kumpulan data yang tersedia dalam Portal E-PROFILE PEMBANGUNAN DAERAH
-                                Kabupaten Seluma dapat diakses secara terbuka dan
-                                dikategorikan sebagai data publik.
-                            </p>
-
-                        </div>
-                        <div class="flex space-x-1 items-center mb-2 mt-8">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-orange-100" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <p class="text-white text-sm   ">Pencarian Data Penduduk, Ekonomi dan Lainnya ...</p>
-                        </div>
-                        <div class="bg-white items-center text-sm justify-between w-full flex rounded-lg   shadow-lg p-2 mb-5 sticky"
-                            style="top: 5px">
-
-
-
-                            <input
-                                class="   rounded-lg w-full py-3 pl-4 text-sm text-gray-700   leading-tight   focus:ring-red-500 border-none duration-300 transform     outline-none   "
-                                type="text" placeholder="Pencarian Data Penduduk, Ekonomi dan Lainnya ...">
-
+                        class="text-center   overflow-hidden   md:rounded-2xl     md:shadow-lg md:shadow-gray-400">
+                        <div id="default-carousel" class="relative  " data-carousel="slide">
+                            <!-- Carousel wrapper -->
                             <div
-                                class="bg-red-600 py-2.5 px-5 flex hover:bg-red-400 cursor-pointer mx-2 duration-300 transform  rounded-lg ">
+                                class="  relative   md:h-96 h-72    shadow-md md:shadow-xl   shadow-[#444] md:shadow-[#444] ">
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out  " data-carousel-item>
+                                    <div class="bg-black bg-opacity-10 w-full h-full absolute z-50">
 
-                                <svg class="w-6 h-6 text-white mr-2" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                CARI
+                                    </div>
+                                    <span
+                                        class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">
+                                        Slide 1</span>
+                                    <img src="https://mc.selumakab.go.id/wp-content/uploads/2023/01/BANNER.png"
+                                        class=" object-cover object-center      w-full h-full relative  ">
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out  " data-carousel-item>
+                                    <div class="bg-black bg-opacity-10 w-full h-full absolute z-50">
+
+                                    </div>
+                                    <span
+                                        class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">
+                                        Slide 1</span>
+                                    <img src="https://mc.selumakab.go.id/wp-content/uploads/2023/01/DJI_0045-2048x1152.jpg"
+                                        class=" object-cover object-center      w-full h-full relative  ">
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out  " data-carousel-item>
+                                    <div class="bg-black bg-opacity-10 w-full h-full absolute z-50">
+
+                                    </div>
+                                    <span
+                                        class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">
+                                        Slide 1</span>
+                                    <img src="https://graphicsfamily.com/wp-content/uploads/edd/2022/01/Abstract-blue-with-golden-geometric-shapes-background-vector-illustration-scaled.jpg"
+                                        class=" object-cover object-center      w-full h-full relative  ">
+                                </div>
 
                             </div>
+                            <!-- Slider indicators -->
+                            <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1"
+                                    data-carousel-slide-to="0"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                                    data-carousel-slide-to="1"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                                    data-carousel-slide-to="2"></button>
 
+
+                            </div>
+                            <!-- Slider controls -->
+                            <button type="button"
+                                class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-prev>
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                                        </path>
+                                    </svg>
+                                    <span class="hidden">Previous</span>
+                                </span>
+                            </button>
+                            <button type="button"
+                                class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-next>
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                        </path>
+                                    </svg>
+                                    <span class="hidden">Next</span>
+                                </span>
+                            </button>
                         </div>
+                        <!-- <div
+                                    class="grid grid-cols-1 px-3 md:grid-cols-2 z-10  mt-32 mb-20 lg:mt-40 overflow-hidden container mx-auto ">
+                                    <div class="col-span-1 px-8 lg:px-12 text-white   place-self-center text-left">
+                                        <div data-aos="fade-left">
+                                            <h2
+                                                class="font-extrabold font-[arial] text-3xl lg:text-5xl inline-block text-transparent bg-clip-text bg-gradient-to-b from-white from-30% to-orange-200  ">
+                                                Portal E-PROFILE PEMBANGUNAN DAERAH<br />Kabupaten Seluma
+                                            </h2>
+                                            <p class="text-gray-200 mt-4 text-sm leading-7 md:leading-7  ">
+                                                Seluruh kumpulan data yang tersedia dalam Portal E-PROFILE PEMBANGUNAN DAERAH
+                                                Kabupaten Seluma dapat diakses secara terbuka dan
+                                                dikategorikan sebagai data publik.
+                                            </p>
+
+                                        </div>
+                                        <div class="flex space-x-1 items-center mb-2 mt-8">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-orange-100" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <p class="text-white text-sm   ">Pencarian Data Penduduk, Ekonomi dan Lainnya ...</p>
+                                        </div>
+                                        <div class="bg-white items-center text-sm justify-between w-full flex rounded-lg   shadow-lg p-2 mb-5 sticky"
+                                            style="top: 5px">
+
+
+
+                                            <input
+                                                class="   rounded-lg w-full py-3 pl-4 text-sm text-gray-700   leading-tight   focus:ring-red-500 border-none duration-300 transform     outline-none   "
+                                                type="text" placeholder="Pencarian Data Penduduk, Ekonomi dan Lainnya ...">
+
+                                            <div
+                                                class="bg-red-600 py-2.5 px-5 flex hover:bg-red-400 cursor-pointer mx-2 duration-300 transform  rounded-lg ">
+
+                                                <svg class="w-6 h-6 text-white mr-2" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                                CARI
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1 lg:mt-20 2xl:mt-0  ">
+                                        <lottie-player data-aos="fade-right" src="../src/qksZkIwTuQ.json"
+                                            style="filter: drop-shadow(10px 10px 0px #4a0702)" background="transparent" speed="1"
+                                            class="w-4/6 mx-auto" loop autoplay></lottie-player>
+                                    </div>
+                                </div>
+
+
+                                <div class="custom-shape-divider-bottom-1701011978">
+                                    <svg class="fill-gray-100 lg:h-24 2xl:w-32 h-10" data-name="Layer 1"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                                        <path
+                                            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                                            opacity=".25" class="shape-fill"></path>
+                                        <path
+                                            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                                            opacity=".5" class="shape-fill"></path>
+                                        <path
+                                            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                                            class="shape-fill"></path>
+                                    </svg>
+                                </div> -->
                     </div>
-                    <div class="col-span-1 lg:mt-20 2xl:mt-0  ">
-                        <lottie-player data-aos="fade-right" src="../src/qksZkIwTuQ.json"
-                            style="filter: drop-shadow(10px 10px 0px #4a0702)" background="transparent" speed="1"
-                            class="w-4/6 mx-auto" loop autoplay></lottie-player>
+                </div>
+                <div class="col-span-1 grid">
+                    <div class="place-self-center">
+                        <h2
+                            class="mb-2 text-center font-sans text-3xl lg:text-4xl font-extrabold inline-block text-transparent bg-clip-text bg-gradient-to-r from-red-900 from-30% to-red-500 uppercase">
+                            LETAK GEOGRAFIS KABUPATEN SELUMA
+                        </h2>
+                        <p class="text-base leading-loose text-justify">
+                            <!-- Perubahan pada class di sini -->
+                            Kabupaten Seluma terletak pada Pantai Barat Sumatera Bagian Selatan yang terletak pada
+                            koordinat
+                            garis lintang dan bujur, yaitu 03.49’55’66” LS – 04.21’40’22” LS dan 101.17’27’57” BT –
+                            102.59’40’54” BT. Luas wilayah Kabupaten Seluma menurut Undang-undang No. 3 tahun 2003
+                            tentang
+                            Pembentukan Kabupaten Muko-Muko, Kabupaten Seluma, dan Kabupaten Kaur, serta sesuai dengan
+                            letak
+                            lintang dan bujurnya adalah seluas +2.400,44 km2 atau 12,05 persen dari luas wilayah
+                            Provinsi
+                            Bengkulu yang seluas 19.919,33 km2. Dari posisi geografisnya, sebelah utara berbatasan
+                            Kecamatan
+                            Selebar dengan Kota Bengkulu dan Kecamatan Talang Empat Kabupaten Bengkulu Tengah, sebelah
+                            timur
+                            berbatasan Kabupaten Kepahiang dan Lahat Provinsi Sumatera Selatan, sebelah selatan
+                            berbatasan
+                            Kabupaten Bengkulu Selatan, dan sebelah barat Samudera Hindia.
+                        </p>
                     </div>
                 </div>
 
-
-                <div class="custom-shape-divider-bottom-1701011978">
-                    <svg class="fill-gray-100 lg:h-24 2xl:w-32 h-10" data-name="Layer 1"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path
-                            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                            opacity=".25" class="shape-fill"></path>
-                        <path
-                            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                            opacity=".5" class="shape-fill"></path>
-                        <path
-                            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                            class="shape-fill"></path>
-                    </svg>
-                </div> -->
             </div>
+
         </section>
         <!-- end slider -->
 
@@ -342,10 +334,10 @@
                 <div class="col-span-1 grid">
                     <div class="place-self-center">
                         <h2 class="mb-2 text-center font-sans text-3xl lg:text-4xl font-extrabold inline-block text-transparent bg-clip-text bg-gradient-to-r from-red-900 from-30% to-red-500 uppercase">
-                            LETAK GEOGRAFIS KABUPATEN SELUMA
+                            LUAS WILAYAH KABUPATEN SELUMA
                         </h2>
                         <p class="text-base leading-loose text-justify"> <!-- Perubahan pada class di sini -->
-                            Kabupaten Seluma terletak pada Pantai Barat Sumatera Bagian Selatan yang terletak pada koordinat garis lintang dan bujur, yaitu 03.49’55’66” LS – 04.21’40’22” LS dan 101.17’27’57” BT – 102.59’40’54” BT. Luas wilayah Kabupaten Seluma menurut Undang-undang No. 3 tahun 2003 tentang Pembentukan Kabupaten Muko-Muko, Kabupaten Seluma, dan Kabupaten Kaur, serta sesuai dengan letak lintang dan bujurnya adalah seluas +2.400,44 km2 atau 12,05 persen dari luas wilayah Provinsi Bengkulu yang seluas 19.919,33 km2. Dari posisi geografisnya, sebelah utara berbatasan Kecamatan Selebar dengan Kota Bengkulu dan Kecamatan Talang Empat Kabupaten Bengkulu Tengah, sebelah timur berbatasan Kabupaten Kepahiang dan Lahat Provinsi Sumatera Selatan, sebelah selatan berbatasan Kabupaten Bengkulu Selatan, dan sebelah barat Samudera Hindia.
+                            Luas wilayah Kabupaten Seluma menurut Undang-undang No. 3 tahun 2003 tentang pembentukan Kabupaten Muko-Muko, Kabupaten Seluma, dan Kabupaten Kaur, serta sesuai dengan letak lintang dan bujurnya adalah seluas +2.400,44 km2 atau 12,05 persen dari luas wilayah Propinsi Bengkulu yang seluas 19.919,33 km2. Kabupaten Seluma merupakan kabupaten dengan luas wilayah terbesar ketiga di Propinsi Bengkulu, dimana kabupaten terluas yaitu Kabupaten Bengkulu Utara dengan 4.324,60 km2 diikuti oleh Kabupaten Muko-muko diposisi kedua dengan luas 4.036,70 km2.
                         </p>
                     </div>
                 </div>
